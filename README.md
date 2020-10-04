@@ -39,10 +39,17 @@ In the above example, there are 2 binding function flows (named as "foo" and "ba
 
 Based on the above discussion of using NB's **stdout** driver to view binding function outputs, the python program in this repository makes it further to plot the binding function output using a graph. 
 
-For example, for the previous 2 binding function flows, their plotted graphs look like below:
+For example, for the previous 2 binding function flows, their plotted graphs (against cycle number of 50) look like below:
 
 <img src="https://github.com/yabinmeng/nb_binding_plot/blob/master/screenshots/bindingplot1.png" width=500> 
 
 ## Pre-requisites and Limitations
+
+In order to use the python program in this repository, please make sure:
+* Python version 3.0+ (in my testing, I'm using version 3.8.5)
+* Python [NumPy](https://numpy.org/) package ([installation](https://numpy.org/install/))
+* Python [Matplotlib](https://matplotlib.org/) package ([installation](https://matplotlib.org/users/installing.html))
+
+&#U+1F4A2; **Limitation**: 
 
 ## Execute the Script

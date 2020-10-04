@@ -227,8 +227,9 @@ if __name__ == '__main__':
             print("   == Error in NB execution. Please check log file for more details!")
             break
 
-        if func_names[0] in line:
+        if (func_names[0] in line) and ("=" in line):
             keyValuePairs = line.split()
+
             line_values = []
             for i in range(0, len(keyValuePairs)):
                 line_values.append(float(keyValuePairs[i].split('=')[1]))

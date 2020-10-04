@@ -39,7 +39,9 @@ In the above example, there are 2 binding function flows (named as "foo" and "ba
 
 Based on the above discussion of using NB's **stdout** driver to view binding function outputs, the python program in this repository makes it further to plot the binding function output using a graph. 
 
+For example, for the previous 2 binding function flows, their plotted graphs look like below:
 
+<img src="https://github.com/yabinmeng/nb_binding_plot/blob/master/screenshots/bindingplot1.png" width=500> 
 
 ## Pre-requisites and Limitations
 

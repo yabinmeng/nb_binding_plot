@@ -50,6 +50,6 @@ In order to use the python program in this repository, please make sure:
 * Python [NumPy](https://numpy.org/) package ([installation](https://numpy.org/install/))
 * Python [Matplotlib](https://matplotlib.org/) package ([installation](https://matplotlib.org/users/installing.html))
 
-&#1F4A2; **Limitation**: 
+&#x1F4A2; **Limitation**: 
 
 ## Execute the Script

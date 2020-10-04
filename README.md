@@ -50,6 +50,37 @@ In order to use the python program in this repository, please make sure:
 * Python [NumPy](https://numpy.org/) package ([installation](https://numpy.org/install/))
 * Python [Matplotlib](https://matplotlib.org/) package ([installation](https://matplotlib.org/users/installing.html))
 
-&#x1F4A2; **Limitation**: 
+&#x1F4A2; **Limitation**: right now, this python program is only applicable to binding functions that produce numeric output results (e.g. int, long, double, etc.). For other binding functions that produce different types of output results (e.g. String), this program is not applicable.
 
-## Execute the Script
+## Program Execution
+
+The usage of this program is as below:
+```
+usage: PlotBinding.py [-h] [--func [FUNC]] [--subplot [SUBPLOT]]
+                      [--cycle_num [CYCLE_NUM]] [--show_detail [SHOW_DETAIL]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --func [FUNC]         binding function
+  --subplot [SUBPLOT]
+  --cycle_num [CYCLE_NUM]
+  --show_detail [SHOW_DETAIL]
+```
+
+Among these input parameters,
+
+* "**--func**" is the mandatory and used to specify an NB binding fucnion flow that you want to see the graphical output.
+  * For multiple binding functions, you need to have multiple "--func [FUNC]" input parameter
+* "**--subplot [true|false]**" is optional (default **false**). When setting to **true**, it allows max. 4 sub-graph in one single plot.
+  * If this value is **false**, each binding function will have its own plotted graph.
+* "**--cycle_num**" is optional (default **50**) and it specifies the cycle number that NB is going to execute.
+* "**--show_detail**" is optional  (default **false**). When setting as **true**, it prints out binding function detail outputs on the command line.
+
+In the following example, we're plotting the graphs for 5 NB binding functions using subplots. 
+```
+$ python PlotBinding.py --subplot true --cycle_num 100 --func Add(10) --func T(2.0) --func CycleRange(10) --func Binomial(1,0.5) --func FixedValue(5)
+```
+
+The output is as below:
+
+<img src="https://github.com/yabinmeng/nb_binding_plot/blob/master/screenshots/bindingplot2.png" width=800> 

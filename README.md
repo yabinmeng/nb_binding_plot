@@ -71,6 +71,8 @@ Among these input parameters,
 
 * "**--func**" is the mandatory and used to specify an NB binding fucnion flow that you want to see the graphical output.
   * For multiple binding functions, you need to have multiple "--func [FUNC]" input parameter
+  * **NOTE**: Do NOT include space in the actual binding function formula. Or use double quote around the formula.
+    * E.g. --func HashRange(10,20), or --func "HashRange(10, 20)" 
 * "**--subplot [true|false]**" is optional (default **false**). When setting to **true**, it allows max. 4 sub-graph in one single plot.
   * If this value is **false**, each binding function will have its own plotted graph.
 * "**--cycle_num**" is optional (default **50**) and it specifies the cycle number that NB is going to execute.

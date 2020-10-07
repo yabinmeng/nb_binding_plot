@@ -13,24 +13,24 @@ One way to quickly check binding function outputs is to define a scenario defini
 * Create a scenario definition file (e.g. MyBinding.yaml)
 ```
 bindings:
-  foo: SaveLong('cycle'); CoinFunc(0.5, FixedValue(-10), FixedValue(10))
-  bar: T(2); Add(10)
+  foo: T(2); Add(10)
+  bar: SaveLong('cycle'); CoinFunc(0.5, FixedValue(-10), FixedValue(10))
 ```
 
 * Execute using **stdout** driver
 ```
 $ ./nb run driver=stdout workload=MyBinding.yaml cycles=10
 Logging to logs/scenario_20201004_150742_288.log
-t=9.451913992436708 savelong=-10
-t=10.553459342042853 savelong=10
-t=11.775443926493887 savelong=10
-t=11.580608821696428 savelong=10
-t=8.930814293546522 savelong=-10
-t=9.954798431622152 savelong=-10
-t=10.544348872282352 savelong=10
-t=10.13139344448723 savelong=10
-t=9.807465364476807 savelong=-10
-t=9.330448775944763 savelong=-10
+foo=9.451913992436708 bar=-10
+foo=10.553459342042853 bar=10
+foo=11.775443926493887 bar=10
+foo=11.580608821696428 bar=10
+foo=8.930814293546522 bar=-10
+foo=9.954798431622152 bar=-10
+foo=10.544348872282352 bar=10
+foo=10.13139344448723 bar=10
+foo=9.807465364476807 bar=-10
+foo=9.330448775944763 bar=-10
 ```
 
 In the above example, there are 2 binding function flows (named as "foo" and "bar" respectively). Using NB's **stdout** driver, we can see how the binding function output looks like for each iteration of the execution cycle. This will help better understand each binding function.

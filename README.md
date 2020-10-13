@@ -71,7 +71,7 @@ Among these input parameters,
 
 * "**--func**" is the mandatory and used to specify an NB binding fucnion flow that you want to see the graphical output.
   * For multiple binding functions, you need to have multiple "--func [FUNC]" input parameter
-  * **NOTE**: Please use double quote around the input formula. Otherwise, you may run into the following error message (which is caused by error parsing the input arguments):
+  * **NOTE**: **Please use double quote around the input formula**. Otherwise, you may run into the following error message (which is caused by error parsing the input arguments):
   ```
     zsh:  unknown file attribute: 1
   ```

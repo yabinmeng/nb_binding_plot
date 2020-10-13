@@ -71,7 +71,10 @@ Among these input parameters,
 
 * "**--func**" is the mandatory and used to specify an NB binding fucnion flow that you want to see the graphical output.
   * For multiple binding functions, you need to have multiple "--func [FUNC]" input parameter
-  * **NOTE**: Do NOT include space in the actual binding function formula. Or use double quote around the formula.
+  * **NOTE**: Please use double quote around the input formula. Otherwise, you may run into the following error message (which is caused by error parsing the input arguments):
+  ```
+    zsh:  unknown file attribute: 1
+  ```
     * E.g. --func HashRange(10,20), or --func "HashRange(10, 20)" 
 * "**--subplot [true|false]**" is optional (default **false**). When setting to **true**, it allows max. 4 sub-graph in one single plot.
   * If this value is **false**, each binding function will have its own plotted graph.
@@ -80,7 +83,7 @@ Among these input parameters,
 
 In the following example, we're plotting the graphs for 5 NB binding functions using subplots. 
 ```
-$ python PlotBinding.py --subplot true --cycle_num 100 --func Add(10) --func T(2.0) --func CycleRange(10) --func Binomial(1,0.5) --func FixedValue(5)
+$ python PlotBinding.py --subplot true --cycle_num 100 --func "Add(10)" --func "T(2.0)" --func "CycleRange(10)" --func "Binomial(1,0.5)" --func "FixedValue(5)"
 ```
 
 The output is as below:
